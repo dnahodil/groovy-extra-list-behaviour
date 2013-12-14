@@ -10,7 +10,7 @@ class ListExtensionsTests extends Specification {
 		[].only()
 
 		then:
-		thrown(MoreThanOneElementException)
+		thrown(NoSuchElementException)
 	}
 
 	def "only() returns only element"() {

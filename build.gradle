@@ -9,13 +9,15 @@ repositories {
 
 dependencies {
 	compile "org.codehaus.groovy:groovy-all:1.8.6"
-	testCompile "org.spockframework:spock-core:0.6-groovy-1.8"
+	// testCompile "org.spockframework:spock-core:0.6-groovy-1.8"
+	testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
+	testCompile fileTree(dir: 'build/libs/', includes: ["groovy-extra-list-behaviour-${version}.jar".toString()])
 }
 
 task generateModule << {
-	new File( "$buildDir/classes/main/META-INF/services" ).with { f ->
+	new File("$buildDir/classes/main/META-INF/services").with { f ->
 		f.mkdirs()
-		new File( f, 'org.codehaus.groovy.runtime.ExtensionModule' ).withWriter { w ->
+		new File(f, 'org.codehaus.groovy.runtime.ExtensionModule').withWriter { w ->
 			w.writeLine 'moduleName=groovy-extra-list-behaviour'
 			w.writeLine "moduleVersion=$version"
 			w.writeLine "extensionClasses=com.fgi.extensions.ListExtensions"
