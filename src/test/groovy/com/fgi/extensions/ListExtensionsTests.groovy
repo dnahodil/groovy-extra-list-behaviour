@@ -28,4 +28,44 @@ class ListExtensionsTests extends Specification {
 		then:
 		thrown(MoreThanOneElementException)
 	}
+
+	def "onlyIfAny() returns null on empty list"() {
+		given:
+		def el = [].onlyIfAny()
+
+		expect:
+		el == null
+	}
+
+	def "firstIfAny() returns null on empty list"() {
+		given:
+		def el = [].firstIfAny()
+
+		expect:
+		el == null
+	}
+
+	def "lastIfAny() returns null on empty list"() {
+		given:
+		def el = [].lastIfAny()
+
+		expect:
+		el == null
+	}
+
+	def "headIfAny() returns null on empty list"() {
+		given:
+		def el = [].headIfAny()
+
+		expect:
+		el == null
+	}
+
+	def "tailIfAny() returns null on empty list"() {
+		given:
+		def el = [].tailIfAny()
+
+		expect:
+		el == null
+	}
 }
