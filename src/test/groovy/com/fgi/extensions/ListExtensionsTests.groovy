@@ -14,11 +14,8 @@ class ListExtensionsTests extends Specification {
 	}
 
 	def "only() returns only element"() {
-		given:
-		def el = ['a'].only()
-
 		expect:
-		el == 'a'
+		['a'].only() == 'a'
 	}
 
 	def "only() fails on list with many elements"() {
@@ -30,42 +27,27 @@ class ListExtensionsTests extends Specification {
 	}
 
 	def "onlyIfAny() returns null on empty list"() {
-		given:
-		def el = [].onlyIfAny()
-
 		expect:
-		el == null
+		[].onlyIfAny() == null
 	}
 
 	def "firstIfAny() returns null on empty list"() {
-		given:
-		def el = [].firstIfAny()
-
 		expect:
-		el == null
+		[].firstIfAny() == null
 	}
 
 	def "lastIfAny() returns null on empty list"() {
-		given:
-		def el = [].lastIfAny()
-
 		expect:
-		el == null
+		[].lastIfAny() == null
 	}
 
 	def "headIfAny() returns null on empty list"() {
-		given:
-		def el = [].headIfAny()
-
 		expect:
-		el == null
+		[].headIfAny() == null
 	}
 
 	def "tailIfAny() returns null on empty list"() {
-		given:
-		def el = [].tailIfAny()
-
 		expect:
-		el == null
+		[].tailIfAny() == null
 	}
 }
