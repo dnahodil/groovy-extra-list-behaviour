@@ -5,7 +5,7 @@ Current version: 1.1.0
 Adds extra methods to Groovy Lists. Requires Groovy version > 2.0.5 as it utilises the Groovy extensions mechanism.
 
 ## Using this library
-I plan to publish this library to a central repository so it can be used with Maven or other dependancy resolution tools. For now you can download the [built jar](https://github.com/dnahodil/groovy-extra-list-behaviour/build/libs/groovy-extra-list-behaviour-1.1.0.jar) and include it as a library in your project.
+I plan to publish this library to a central repository so it can be used with Maven or other dependancy resolution tools. For now you can download the [built jar](https://github.com/dnahodil/groovy-extra-list-behaviour/blob/master/build/libs/groovy-extra-list-behaviour-1.1.0.jar) and include it as a library in your project.
 
 ## New methods available
 ### `only()`
