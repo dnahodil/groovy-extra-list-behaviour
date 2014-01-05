@@ -6,11 +6,13 @@ class ListExtensions {
 
 	public static def only(List list) {
 
-		if (list.size() == 0)
+		def size = list.size()
+
+		if (size == 0)
 			throw new NoSuchElementException("Cannot access only() element from an empty List")
 
-		if (list.size() > 1)
-			throw new MoreThanOneElementException("Cannot access only() element from a List with many elements (List has ${list.size()} elements)")
+		if (size > 1)
+			throw new MoreThanOneElementException("Cannot access only() element from a List with many elements (List has $size elements)")
 
 		return list.first()
 	}
