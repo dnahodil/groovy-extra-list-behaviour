@@ -1,5 +1,5 @@
 # Groovy Extra List Behaviour
-Current version: 1.0
+Current version: 1.1.0
 
 ## Description
 Adds extra methods to the Groovy Lists. Requires Groovy version > 2.0.5 as it utilises the Groovy extensions mechanism.
