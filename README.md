@@ -11,7 +11,7 @@ I wrote a blog post describing [Adding Groovy extension modules to a Grails appl
 
 ## New methods available
 ### `only()`
-In a similar vein to `first()` and `last()` this method will return the only element of a list. This method allows you to write clearer code by making it expressly clear when we are expecting a List with a single element. An example usage might be if we are calling an SQL utilty which always returns a list of rows as the result, but the SQL has specified `SELECT TOP 1 ...` so we know there will only be one element during normal operation. Calling `first()` or `last()` when we *know* there's only going to be one element weakens the expressiveness of the code, whereas calling `only()` enhances it.
+In a similar vein to `first()` and `last()` this method will return the only element of a list. This method allows you to write clearer code by making it expressly clear when we are expecting a list with a single element. An example usage might be if we are calling an SQL utilty which always returns a list of rows as the result, but the SQL has specified `SELECT TOP 1 ...` so we know there will only be one element during normal operation. Calling `first()` or `last()` when we *know* there's only going to be one element weakens the expressiveness of the code, whereas calling `only()` enhances it.
 
 As with similar methods on the List class this will throw a `NoSuchElementException` if the list is empty. If there is more than the expected one element a `MoreThanOneElementException` will be thrown.
 
