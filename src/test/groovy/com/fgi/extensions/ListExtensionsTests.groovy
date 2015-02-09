@@ -110,4 +110,24 @@ class ListExtensionsTests extends Specification {
 		then:
 		1 * list.tail()
 	}
+
+	def "removeNulls() works on an empty list"() {
+		expect:
+		[].removeNulls() == []
+	}
+
+	def "removeNulls() removes one null from a list"() {
+		expect:
+		['a', null, 'c'].removeNulls() == ['a', 'c']
+	}
+
+	def "removeNulls() removes all nulls from a list"() {
+		expect:
+		[3, null, 2, null,  1].removeNulls() == [3, 2, 1]
+	}
+
+	def "removeNulls() returns an empty list when all elements are null"() {
+		expect:
+		[null, null].removeNulls() == []
+	}
 }
