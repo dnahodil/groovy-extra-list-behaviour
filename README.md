@@ -1,4 +1,6 @@
 # Groovy Extra List Behaviour
+[![Build Status](https://travis-ci.org/dnahodil/groovy-extra-list-behaviour.png)](https://travis-ci.org/dnahodil/groovy-extra-list-behaviour)
+
 Current version: 1.1.0
 
 ## Description
