@@ -1,7 +1,7 @@
 # Groovy Extra List Behaviour
 [![Build Status](https://travis-ci.org/dnahodil/groovy-extra-list-behaviour.png)](https://travis-ci.org/dnahodil/groovy-extra-list-behaviour)
 
-Current version: 1.1.0
+Current version: 1.2.0
 
 ## Description
 Adds extra methods to Groovy lists. Requires Groovy version > 2.0.5 as it utilises the Groovy extensions mechanism.

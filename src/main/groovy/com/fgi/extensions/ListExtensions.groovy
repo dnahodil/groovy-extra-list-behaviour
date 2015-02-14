@@ -41,4 +41,9 @@ class ListExtensions {
 
 		list.size() ? list.tail() : null
 	}
+
+	public static def removeNulls(List list) {
+
+		list.findAll{ it }
+	}
 }
