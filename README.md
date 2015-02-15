@@ -1,10 +1,22 @@
 # Groovy Extra List Behaviour
 [![Build Status](https://travis-ci.org/dnahodil/groovy-extra-list-behaviour.png)](https://travis-ci.org/dnahodil/groovy-extra-list-behaviour)
 
-Current version: 1.2.0
-
 ## Description
 Adds extra methods to Groovy lists. Requires Groovy version > 2.0.5 as it utilises the Groovy extensions mechanism.
+
+## Versions
+**1.2.0** (current version)  
+Added new method: `removeNulls()`
+
+**1.1.0**  
+Switched to [semantic versioning](http://www.semver.org) (no functional changes)
+
+**1.1**  
+Improved some tests (no functional changes)
+
+**1.0**  
+Initial release  
+New methods available: `only()`, `firstIfAny()`, `lastIfAny()`, `headIfAny()`, `tailIfAny()`, and `onlyIfAny()`
 
 ## Using this library
 I plan to publish this library to a central repository so it can be used with Maven or other dependancy resolution tools. For now you can download the [built jar](https://github.com/dnahodil/groovy-extra-list-behaviour/raw/master/build/libs/groovy-extra-list-behaviour-1.1.0.jar) and include it as a library in your project.
@@ -19,7 +31,7 @@ As with similar methods on the List class this will throw a `NoSuchElementExcept
 
 This is described in more detail in my blog post "[An extension for Groovy Lists – getting the only element of a List](http://dnahodil.wordpress.com/2014/01/05/an-extension-for-groovy-lists-getting-the-only-element-of-a-list/)".
 
-### `firstIfAny()`, `lastIfAny()`, `headIfAny()`, `tailIfAny()`, `onlyIfAny()`
+### `firstIfAny()`, `lastIfAny()`, `headIfAny()`, `tailIfAny()`, and `onlyIfAny()`
 These methods extend the `first()`, `last()`, `head()`, `tail()`, and `only()` methods. These methods will behave the same as their counterparts on a non-empty list. The difference is that they will return `null` if the list is empty. This is useful if you are using Groovy truthiness or null-safe navigation to make the subsequent code null-safe. Using these methods will allow you to eliminate an `if` condition, or a usage of the ternary operator, to stop the corresponding call of `first()`, `last()`, etc. on an empty list (which would otherwise throw an exception). 
 
 I wrote a blog post about these, "[An extension for Groovy Lists – a less strict alternative for first(), last(), etc.](http://dnahodil.wordpress.com/2014/01/05/an-extension-for-groovy-lists-a-less-strict-alternative-for-first-last-etc/)".
