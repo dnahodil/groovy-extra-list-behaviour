@@ -1,7 +1,7 @@
 apply plugin: 'groovy'
 
 sourceCompatibility = 1.5
-version = '1.2.0'
+version = '2.0.0'
 
 repositories {
 	mavenCentral()
@@ -20,7 +20,7 @@ task generateModule << {
 		new File(f, 'org.codehaus.groovy.runtime.ExtensionModule').withWriter { w ->
 			w.writeLine 'moduleName=groovy-extra-list-behaviour'
 			w.writeLine "moduleVersion=$version"
-			w.writeLine "extensionClasses=com.fgi.extensions.ListExtensions"
+			w.writeLine "extensionClasses=com.dnahodil.groovy.extensions.ListExtensions"
 			w.writeLine 'staticExtensionClasses='
 		}
 	}

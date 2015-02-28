@@ -1,6 +1,4 @@
-package com.fgi.extensions
-
-import com.fgi.extensions.exceptions.MoreThanOneElementException
+package com.dnahodil.groovy.extensions
 
 class ListExtensions {
 
@@ -37,12 +35,12 @@ class ListExtensions {
 		list.size() ? list.head() : null
 	}
 
-	public static def tailIfAny(List list) {
+	public static List tailIfAny(List list) {
 
 		list.size() ? list.tail() : null
 	}
 
-	public static def removeNulls(List list) {
+	public static List removeNulls(List list) {
 
 		list.findAll{ it }
 	}

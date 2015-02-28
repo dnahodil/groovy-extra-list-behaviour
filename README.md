@@ -5,7 +5,11 @@
 Adds extra methods to Groovy lists. Requires Groovy version > 2.0.5 as it utilises the Groovy extensions mechanism.
 
 ## Versions
-**1.2.0** (current version)  
+**2.0.0** (current version)  
+Updated return types of `tailIfAny()` and `removeNulls()` from Object to List  
+Changed package names (in preparation of publishing to maven central repo)
+
+**1.2.0**  
 Added new method: `removeNulls()`
 
 **1.1.0**  
@@ -19,7 +23,7 @@ Initial release
 New methods available: `only()`, `firstIfAny()`, `lastIfAny()`, `headIfAny()`, `tailIfAny()`, and `onlyIfAny()`
 
 ## Using this library
-I plan to publish this library to a central repository so it can be used with Maven or other dependancy resolution tools. For now you can download the [built jar](https://github.com/dnahodil/groovy-extra-list-behaviour/raw/master/build/libs/groovy-extra-list-behaviour-1.2.0.jar) and include it as a library in your project.
+I plan to publish this library to a central repository so it can be used with Maven or other dependancy resolution tools. For now you can download the [built jar](https://github.com/dnahodil/groovy-extra-list-behaviour/raw/master/build/libs/groovy-extra-list-behaviour-2.0.0.jar) and include it as a library in your project.
 
 I wrote a blog post describing [Adding Groovy extension modules to a Grails application](http://dnahodil.wordpress.com/2014/01/05/adding-groovy-extension-modules-to-a-grails-application/).
 
