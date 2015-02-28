@@ -20,7 +20,7 @@ task generateModule << {
 		new File(f, 'org.codehaus.groovy.runtime.ExtensionModule').withWriter { w ->
 			w.writeLine 'moduleName=groovy-extra-list-behaviour'
 			w.writeLine "moduleVersion=$version"
-			w.writeLine "extensionClasses=com.fgi.extensions.ListExtensions"
+			w.writeLine "extensionClasses=com.dnahodil.groovy.extensions.ListExtensions"
 			w.writeLine 'staticExtensionClasses='
 		}
 	}

@@ -1,6 +1,5 @@
-package com.fgi.extensions
+package com.dnahodil.groovy.extensions
 
-import com.fgi.extensions.exceptions.MoreThanOneElementException
 import spock.lang.Specification
 
 class ListExtensionsTests extends Specification {

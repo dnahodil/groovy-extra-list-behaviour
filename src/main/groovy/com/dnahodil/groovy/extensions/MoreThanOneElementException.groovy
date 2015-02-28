@@ -1,4 +1,4 @@
-package com.fgi.extensions.exceptions
+package com.dnahodil.groovy.extensions
 
 class MoreThanOneElementException extends RuntimeException {
 
