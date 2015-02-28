@@ -1,6 +1,4 @@
-package com.fgi.extensions
-
-import com.fgi.extensions.exceptions.MoreThanOneElementException
+package com.dnahodil.groovy.extensions
 
 class ListExtensions {
 
