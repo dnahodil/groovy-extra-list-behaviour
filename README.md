@@ -1,10 +1,15 @@
 # Groovy Extra List Behaviour
 [![Build Status](https://travis-ci.org/dnahodil/groovy-extra-list-behaviour.png)](https://travis-ci.org/dnahodil/groovy-extra-list-behaviour)
 
-## Description
+[About](#about) »  
+[Releases](#releases) »  
+[Using this library](#using-this-library) »  
+[New methods available](#new-methods-available) »
+
+## About
 Adds extra methods to Groovy lists. Requires Groovy version > 2.0.5 as it utilises the Groovy extensions mechanism.
 
-## Versions
+## Releases
 **2.0.0** (current version)  
 Updated return types of `tailIfAny()` and `removeNulls()` from Object to List  
 Changed package names (in preparation of publishing to maven central repo)
