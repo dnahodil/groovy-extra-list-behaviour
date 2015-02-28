@@ -1,6 +1,7 @@
 .idea/
 .gradle/
 out/
+*.iml
 
 build/*
 !build/libs/
