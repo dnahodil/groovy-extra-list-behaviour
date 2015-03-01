@@ -7,7 +7,8 @@
 [New methods available](#new-methods-available) »
 
 ## About
-Adds extra methods to Groovy lists. Requires Groovy version > 2.0.5 as it utilises the Groovy extensions mechanism.
+Adds extra methods to Groovy lists. Requires Groovy version > 2.0.5 as it utilises the Groovy extensions mechanism.  
+Released under the [MIT license](https://github.com/dnahodil/groovy-extra-list-behaviour/raw/master/LICENSE).
 
 ## Releases
 **2.0.0** (current version)  
