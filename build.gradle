@@ -1,6 +1,10 @@
 apply plugin: 'groovy'
+apply plugin: 'maven'
+apply plugin: 'signing'
 
 sourceCompatibility = 1.5
+def archivesBaseName = 'groovy-extra-list-behaviour'
+group = 'com.dnahodil.groovy.extensions'
 version = '2.0.1'
 
 repositories {
@@ -11,14 +15,14 @@ dependencies {
 	compile "org.codehaus.groovy:groovy-all:2.2.1"
 	testCompile "org.spockframework:spock-core:0.7-groovy-2.0"
 	testCompile "cglib:cglib-nodep:2.2.2"
-	testCompile fileTree(dir: 'build/libs/', includes: ["groovy-extra-list-behaviour-${version}.jar".toString()])
+	testCompile fileTree(dir: 'build/libs/', includes: ["${archivesBaseName}-${version}.jar".toString()])
 }
 
 task generateModule << {
 	new File("$buildDir/classes/main/META-INF/services").with { f ->
 		f.mkdirs()
 		new File(f, 'org.codehaus.groovy.runtime.ExtensionModule').withWriter { w ->
-			w.writeLine 'moduleName=groovy-extra-list-behaviour'
+			w.writeLine "moduleName=$archivesBaseName"
 			w.writeLine "moduleVersion=$version"
 			w.writeLine "extensionClasses=com.dnahodil.groovy.extensions.ListExtensions"
 			w.writeLine 'staticExtensionClasses='
@@ -26,9 +30,72 @@ task generateModule << {
 	}
 }
 
+task javadocJar(type: Jar) {
+	classifier = 'javadoc'
+	from javadoc
+}
+
+task sourcesJar(type: Jar) {
+	classifier = 'sources'
+	from sourceSets.main.allSource
+}
+
 artifacts {
-	archives jar
+	archives jar, javadocJar, sourcesJar
 }
 
 jar.dependsOn(generateModule)
 test.dependsOn(jar)
+uploadArchives.dependsOn(test)
+
+signing {
+	sign configurations.archives
+}
+
+if (!hasProperty('ossrhUsername')) ext.ossrhUsername = ''
+if (!hasProperty('ossrhPassword')) ext.ossrhPassword = ''
+
+uploadArchives {
+	repositories {
+		mavenDeployer {
+			beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+			repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+				authentication(userName: ossrhUsername, password: ossrhPassword)
+			}
+
+			snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
+				authentication(userName: ossrhUsername, password: ossrhPassword)
+			}
+
+			pom.project {
+				name 'Groovy Extra List Behaviour'
+				packaging 'jar'
+				// optionally artifactId can be defined here
+				description 'Adds extra methods to Lists'
+				url 'https://github.com/dnahodil/groovy-extra-list-behaviour'
+
+				scm {
+					connection 'scm:https://github.com/dnahodil/groovy-extra-list-behaviour.git'
+					developerConnection 'scm:https://github.com/dnahodil/groovy-extra-list-behaviour.git'
+					url 'https://github.com/dnahodil/groovy-extra-list-behaviour'
+				}
+
+				licenses {
+					license {
+						name 'The MIT License'
+						url 'http://opensource.org/licenses/MIT'
+					}
+				}
+
+				developers {
+					developer {
+						id 'dnahodil'
+						name 'David Nahodil'
+						email 'dnahodil@gmail.com'
+					}
+				}
+			}
+		}
+	}
+}
