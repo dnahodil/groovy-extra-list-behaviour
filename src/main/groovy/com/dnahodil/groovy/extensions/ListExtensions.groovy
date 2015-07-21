@@ -42,6 +42,6 @@ class ListExtensions {
 
 	public static List removeNulls(List list) {
 
-		list.findAll{ it }
+		list.findAll{ it != null }
 	}
 }

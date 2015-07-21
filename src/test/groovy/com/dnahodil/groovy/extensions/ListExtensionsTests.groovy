@@ -122,7 +122,7 @@ class ListExtensionsTests extends Specification {
 
 	def "removeNulls() removes all nulls from a list"() {
 		expect:
-		[3, null, 2, null,  1].removeNulls() == [3, 2, 1]
+		[3, null, 2, null, 1, null, 0].removeNulls() == [3, 2, 1, 0]
 	}
 
 	def "removeNulls() returns an empty list when all elements are null"() {
