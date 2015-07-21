@@ -11,7 +11,10 @@ Adds extra methods to Groovy lists. Requires Groovy version > 2.0.5 as it utilis
 Released under the [MIT license](https://github.com/dnahodil/groovy-extra-list-behaviour/raw/master/LICENSE).
 
 ## Releases
-**2.0.0** (current version)  
+**2.0.1** (current version)  
+Fixed bug where `removeNulls()` removed items which weren't null but which were *falsey*
+
+**2.0.0**  
 Updated return types of `tailIfAny()` and `removeNulls()` from Object to List  
 Changed package names (in preparation of publishing to maven central repo)
 
