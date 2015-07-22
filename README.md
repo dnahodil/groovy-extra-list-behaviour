@@ -50,4 +50,4 @@ These methods extend the `first()`, `last()`, `head()`, `tail()`, and `only()` m
 I wrote a blog post about these, "[An extension for Groovy Lists – a less strict alternative for first(), last(), etc.](http://dnahodil.wordpress.com/2014/01/05/an-extension-for-groovy-lists-a-less-strict-alternative-for-first-last-etc/)".
 
 ### `removeNulls()`
-This method will remove all occurences of `null` within a list. Elements in the returned list will be in the same order as they were in the original list. This is the same behaviour as calling `findAll{ it != null }` or `findAll{ it }` on a list but the intent is more clear.
+This method will remove all occurences of `null` within a list. Elements in the returned list will be in the same order as they were in the original list. This is the same behaviour as calling `findAll{ it != null }` on a list but the intent is more clear.
