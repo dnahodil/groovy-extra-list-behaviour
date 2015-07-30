@@ -12,28 +12,33 @@ Adds extra methods to Groovy lists. Requires Groovy version > 2.0.5 as it utilis
 Released under the [MIT license](https://github.com/dnahodil/groovy-extra-list-behaviour/raw/master/LICENSE).
 
 ## Using this library
-You can include this library in your project in a number of ways:  
-**Via [Grape](http://www.groovy-lang.org/Grape)**  
+You can include this library in your project in a number of ways, detailed below.
+### Via [Grape](http://www.groovy-lang.org/Grape)
 e.g. for use in Groovy scripts (including in the GroovyConsole)  
 ```groovy
 @Grab('com.dnahodil.groovy.extensions:groovy-extra-list-behaviour')
 ```
 
-**Via Gradle**
+### In Grails
+Grails version > 2.4.4 is required for this to work automatically.
 ```groovy
-compile 'com.dnahodil.groovy.extensions:groovy-extra-list-behaviour:2.0.1'
+compile('com.dnahodil.groovy.extensions:groovy-extra-list-behaviour:x.y.z')
+```
+For earlier versions of Grails I wrote a blog post describing [Adding Groovy extension modules to a Grails application](http://dnahodil.wordpress.com/2014/01/05/adding-groovy-extension-modules-to-a-grails-application/). You will either need to download the jar to include in your Grails app, or build it yourself using this repository.
+
+### Via Gradle
+```groovy
+compile 'com.dnahodil.groovy.extensions:groovy-extra-list-behaviour:x.y.z'
 ```
 
-**Via Maven**
+### Via Maven
 ```xml
 <dependency>
 	<groupId>com.dnahodil.groovy.extensions</groupId>
 	<artifactId>groovy-extra-list-behaviour</artifactId>
-	<version>2.0.1</version>
+	<version>x.y.z</version>
 </dependency>
 ```
-
-Also, I wrote a blog post describing [Adding Groovy extension modules to a Grails application](http://dnahodil.wordpress.com/2014/01/05/adding-groovy-extension-modules-to-a-grails-application/). You will either need to download the jar to include in your Grails app, or build it yourself using this repository.
 
 ## New methods available
 ### `only()`
