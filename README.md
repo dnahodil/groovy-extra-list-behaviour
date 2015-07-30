@@ -57,7 +57,10 @@ I wrote a blog post about these, "[An extension for Groovy Lists – a less stri
 This method will remove all occurences of `null` within a list. Elements in the returned list will be in the same order as they were in the original list. This is the same behaviour as calling `findAll{ it != null }` on a list but the intent is more clear.
 
 ## Releases
-**2.0.1** (current version)  
+**2.0.2** (current version)  
+Fixed issue [#20](https://github.com/dnahodil/groovy-extra-list-behaviour/issues/20)
+
+**2.0.1**  
 Fixed bug where `removeNulls()` removed items which weren't null but which were *falsey*
 
 **2.0.0**  

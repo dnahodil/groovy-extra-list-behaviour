@@ -5,7 +5,7 @@ apply plugin: 'signing'
 sourceCompatibility = 1.5
 def archivesBaseName = 'groovy-extra-list-behaviour'
 group = 'com.dnahodil.groovy.extensions'
-version = '2.0.1'
+version = '2.0.2'
 
 repositories {
 	mavenCentral()
