@@ -4,7 +4,8 @@
 [About](#about) »  
 [Using this library](#using-this-library) »  
 [New methods available](#new-methods-available) »  
-[Releases](#releases) »
+[Releases](#releases) »  
+[Thanks](#thanks) »
 
 ## About
 Adds extra methods to Groovy lists. Requires Groovy version > 2.0.5 as it utilises the Groovy extensions mechanism.  
@@ -65,3 +66,6 @@ Improved some tests (no functional changes)
 **1.0**  
 Initial release  
 New methods available: `only()`, `firstIfAny()`, `lastIfAny()`, `headIfAny()`, `tailIfAny()`, and `onlyIfAny()`
+
+## Thanks
+Learning about the Groovy extension mechanism and inspiration to try writing an extension myself come from [Tim Yates](https://twitter.com/tim_yates)' [Groovy Common Extensions](https://github.com/timyates/groovy-common-extensions) project. The Gradle build file here is based heavily on his from that project, too.
