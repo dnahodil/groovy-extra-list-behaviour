@@ -2,34 +2,13 @@
 [![Build Status](https://travis-ci.org/dnahodil/groovy-extra-list-behaviour.png)](https://travis-ci.org/dnahodil/groovy-extra-list-behaviour)
 
 [About](#about) »  
-[Releases](#releases) »  
 [Using this library](#using-this-library) »  
-[New methods available](#new-methods-available) »
+[New methods available](#new-methods-available) »  
+[Releases](#releases) »
 
 ## About
 Adds extra methods to Groovy lists. Requires Groovy version > 2.0.5 as it utilises the Groovy extensions mechanism.  
 Released under the [MIT license](https://github.com/dnahodil/groovy-extra-list-behaviour/raw/master/LICENSE).
-
-## Releases
-**2.0.1** (current version)  
-Fixed bug where `removeNulls()` removed items which weren't null but which were *falsey*
-
-**2.0.0**  
-Updated return types of `tailIfAny()` and `removeNulls()` from Object to List  
-Changed package names (in preparation of publishing to maven central repo)
-
-**1.2.0**  
-Added new method: `removeNulls()`
-
-**1.1.0**  
-Switched to [semantic versioning](http://www.semver.org) (no functional changes)
-
-**1.1**  
-Improved some tests (no functional changes)
-
-**1.0**  
-Initial release  
-New methods available: `only()`, `firstIfAny()`, `lastIfAny()`, `headIfAny()`, `tailIfAny()`, and `onlyIfAny()`
 
 ## Using this library
 You can include this library in your project in a number of ways:  
@@ -65,3 +44,24 @@ I wrote a blog post about these, "[An extension for Groovy Lists – a less stri
 
 ### `removeNulls()`
 This method will remove all occurences of `null` within a list. Elements in the returned list will be in the same order as they were in the original list. This is the same behaviour as calling `findAll{ it != null }` on a list but the intent is more clear.
+
+## Releases
+**2.0.1** (current version)  
+Fixed bug where `removeNulls()` removed items which weren't null but which were *falsey*
+
+**2.0.0**  
+Updated return types of `tailIfAny()` and `removeNulls()` from Object to List  
+Changed package names (in preparation of publishing to maven central repo)
+
+**1.2.0**  
+Added new method: `removeNulls()`
+
+**1.1.0**  
+Switched to [semantic versioning](http://www.semver.org) (no functional changes)
+
+**1.1**  
+Improved some tests (no functional changes)
+
+**1.0**  
+Initial release  
+New methods available: `only()`, `firstIfAny()`, `lastIfAny()`, `headIfAny()`, `tailIfAny()`, and `onlyIfAny()`
