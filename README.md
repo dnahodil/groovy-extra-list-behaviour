@@ -13,7 +13,7 @@ Released under the [MIT license](https://github.com/dnahodil/groovy-extra-list-b
 
 ## Using this library
 You can include this library in your project in a number of ways:  
-**Via [Grapes](http://www.groovy-lang.org/Grape)**  
+**Via [Grape](http://www.groovy-lang.org/Grape)**  
 e.g. for use in Groovy scripts (including in the GroovyConsole)  
 ```groovy
 @Grab('com.dnahodil.groovy.extensions:groovy-extra-list-behaviour')
