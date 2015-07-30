@@ -32,9 +32,23 @@ Initial release
 New methods available: `only()`, `firstIfAny()`, `lastIfAny()`, `headIfAny()`, `tailIfAny()`, and `onlyIfAny()`
 
 ## Using this library
-I plan to publish this library to a central repository so it can be used with Maven or other dependancy resolution tools. For now you can download the [built jar](https://github.com/dnahodil/groovy-extra-list-behaviour/raw/master/build/libs/groovy-extra-list-behaviour-2.0.0.jar) and include it as a library in your project.
+You can include this library in your project in a number of ways:  
+**Via [Grapes](http://www.groovy-lang.org/Grape)**  
+e.g. for use in Groovy scripts (including in the GroovyConsole)  
+```groovy
+@Grab('com.dnahodil.groovy.extensions:groovy-extra-list-behaviour')
+```
 
-I wrote a blog post describing [Adding Groovy extension modules to a Grails application](http://dnahodil.wordpress.com/2014/01/05/adding-groovy-extension-modules-to-a-grails-application/).
+**Via Maven**
+```xml
+<dependency>
+	<groupId>com.dnahodil.groovy.extensions</groupId>
+	<artifactId>groovy-extra-list-behaviour</artifactId>
+	<version>2.0.1</version>
+</dependency>
+```
+
+Also, I wrote a blog post describing [Adding Groovy extension modules to a Grails application](http://dnahodil.wordpress.com/2014/01/05/adding-groovy-extension-modules-to-a-grails-application/). You will either need to download the jar to include in your Grails app, or build it yourself using this repository.
 
 ## New methods available
 ### `only()`
