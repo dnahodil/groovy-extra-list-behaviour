@@ -19,6 +19,11 @@ e.g. for use in Groovy scripts (including in the GroovyConsole)
 @Grab('com.dnahodil.groovy.extensions:groovy-extra-list-behaviour')
 ```
 
+**Via Gradle**
+```groovy
+compile 'com.dnahodil.groovy.extensions:groovy-extra-list-behaviour:2.0.1'
+```
+
 **Via Maven**
 ```xml
 <dependency>
