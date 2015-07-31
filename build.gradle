@@ -5,14 +5,14 @@ apply plugin: 'signing'
 sourceCompatibility = 1.5
 def archivesBaseName = 'groovy-extra-list-behaviour'
 group = 'com.dnahodil.groovy.extensions'
-version = '2.0.1'
+version = '2.0.2'
 
 repositories {
 	mavenCentral()
 }
 
 dependencies {
-	compile "org.codehaus.groovy:groovy-all:2.2.1"
+	compile "org.codehaus.groovy:groovy-all:2.0.5"
 	testCompile "org.spockframework:spock-core:0.7-groovy-2.0"
 	testCompile "cglib:cglib-nodep:2.2.2"
 	testCompile fileTree(dir: 'build/libs/', includes: ["${archivesBaseName}-${version}.jar".toString()])
