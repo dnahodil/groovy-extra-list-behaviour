@@ -46,15 +46,46 @@ In a similar vein to `first()` and `last()` this method will return the only ele
 
 As with similar methods on the List class this will throw a `NoSuchElementException` if the list is empty. If there is more than the expected one element a `MoreThanOneElementException` will be thrown.
 
+``` groovy
+['a', 'b'].only() // Throws MoreThanOneElementException
+assert ['a'].only() == 'a'
+[].only() // Throws NoSuchElementException
+```
+
 This is described in more detail in my blog post "[An extension for Groovy Lists – getting the only element of a List](http://dnahodil.wordpress.com/2014/01/05/an-extension-for-groovy-lists-getting-the-only-element-of-a-list/)".
 
 ### `firstIfAny()`, `lastIfAny()`, `headIfAny()`, `tailIfAny()`, and `onlyIfAny()`
 These methods extend the `first()`, `last()`, `head()`, `tail()`, and `only()` methods. These methods will behave the same as their counterparts on a non-empty list. The difference is that they will return `null` if the list is empty. This is useful if you are using Groovy truthiness or null-safe navigation to make the subsequent code null-safe. Using these methods will allow you to eliminate an `if` condition, or a usage of the ternary operator, to stop the corresponding call of `first()`, `last()`, etc. on an empty list (which would otherwise throw an exception). 
 
+``` groovy
+assert ['a', 'b'].firstIfAny() == 'a'
+assert ['a'].firstIfAny() == 'a'
+assert [].firstIfAny() == null
+
+assert ['a', 'b'].lastIfAny() == 'b'
+assert ['a'].lastIfAny() == 'a'
+assert [].lastIfAny() == null
+
+assert ['a', 'b'].headIfAny() == 'a'
+assert ['a'].headIfAny() == 'a'
+assert [].headIfAny() == null
+
+assert ['a', 'b'].tailIfAny() == ['b']
+assert ['a'].tailIfAny() == []
+assert [].tailIfAny() == null
+
+assert ['a'].onlyIfAny() == 'a'
+assert [].onlyIfAny() == null
+```
+
 I wrote a blog post about these, "[An extension for Groovy Lists – a less strict alternative for first(), last(), etc.](http://dnahodil.wordpress.com/2014/01/05/an-extension-for-groovy-lists-a-less-strict-alternative-for-first-last-etc/)".
 
 ### `removeNulls()`
 This method will remove all occurences of `null` within a list. Elements in the returned list will be in the same order as they were in the original list. This is the same behaviour as calling `findAll{ it != null }` on a list but the intent is more clear.
+
+``` groovy
+assert [1, false, null, '', 2].removeNulls() == [1, false, '', 2]
+```
 
 ## Releases
 **2.0.2** (current version)  
