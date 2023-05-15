@@ -3,7 +3,6 @@ package com.dnahodil.groovy.extensions
 class ListExtensions {
 
 	public static def only(List list) {
-
 		def size = list.size()
 
 		if (size == 0)
@@ -16,32 +15,26 @@ class ListExtensions {
 	}
 
 	public static def onlyIfAny(List list) {
-
 		list.size() ? list.only() : null
 	}
 
 	public static def firstIfAny(List list) {
-
 		list.size() ? list.first() : null
 	}
 
 	public static def lastIfAny(List list) {
-
 		list.size() ? list.last() : null
 	}
 
 	public static def headIfAny(List list) {
-
 		list.size() ? list.head() : null
 	}
 
 	public static List tailIfAny(List list) {
-
 		list.size() ? list.tail() : null
 	}
 
 	public static List removeNulls(List list) {
-
 		list.findAll{ it != null }
 	}
 }
